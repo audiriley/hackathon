@@ -1,6 +1,24 @@
-# 오늘 뭐 먹지
-사용자의 식사 메뉴 선택을 돕는 서비스 <dir>
-This repository is for '오늘 뭐 먹지?'(grab out what?), service which helps people to choose what to grab out for meal.
-> GDG FIREBASE HACKATON<dir>
-> 2017.02.17(Fri)~2017.02.18(Sat)
+﻿>제주를 찾는 재주
 
+>제주도 여행자들이 편리하게 여행을 할 수 있도록 도와주는 웹사이트입니다. 
+
+>audiriley, lynring24, ID
+
+<ul>
+<li>지역별, 시간별 날씨 알림 
+<li>여행 루트 설정 기능
+<li>게시판
+</ul>
+
+<hr>
+
+>Clue for Jeju
+
+>Website for helping visitors in Jeju island
+
+>work done by audiriley,lynring24, ID
+<ul>
+<li> weather forecast : local, every hour
+<li> selecting route
+<li> board
+</ul>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta author="lyn" />
+    <title>Simple Polylines</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+    var marker = new Array();
+    var uluru = new Array();
+    var map;
+      // This example creates a 2-pixel-wide red polyline showing the path of William
+      // Kingsford Smith's first trans-Pacific flight between Oakland, CA, and
+      // Brisbane, Australia.
+
+      function initMap() {
+        uluru[0] = {lat: 33.305894, lng: 126.28942};
+        uluru[1] = {lat: 33.24085, lng: 126.56181300000003};
+       map = new google.maps.Map(document.getElementById('map'), {
+         zoom: 10,
+         center: uluru[0]
+
+       });
+         marker["오설록"] = new google.maps.Marker({
+             position: uluru[0],
+             map: map,
+             label : 'A'
+             });
+         marker["올레 사무국"] = new google.maps.Marker({
+           position: uluru[1],
+           map: map,
+           label: 'B'
+         });
+         draw_path();
+      }
+        function draw_path(){ // 경로 그리기
+          var Path = new google.maps.Polyline({
+            Path: uluru, strokeColor:'#0000FF',stokeOpacity:1.0, strokeWeight:4
+          });
+         Path.setMap(map);
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCm9feXcf-2caAZ-K2PikChgFy375P4Y0Q&callback=initMap">
+    </script>
+  </body>
+</html>

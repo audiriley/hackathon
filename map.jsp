@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>·çÆ®(1.ÀÏÁ¤)</title>
+<title>ë£¨íŠ¸(1.ì¼ì •)</title>
 
     
     <!-- Bootstrap Core CSS -->
@@ -24,17 +24,17 @@
 	<!-- Map API -->
 		<!-- Google API call&key-->
 	<script
-  	  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCm9feXcf-2caAZ-K2PikChgFy375P4Y0Q">
+  	  src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY">
 	</script>
 		
 		<!-- Map API onScreen-->
 	<script>
 		var map;
 		var geocoder;
-		var address;//ÁÖ¼Ò¸¦ ¹Ş¾Æ¿Ã °ª ÇÏ³ª¸¸ ÀÖÀ¸¸é µÈ´Ù .
+		var address;//ì£¼ì†Œë¥¼ ë°›ì•„ì˜¬ ê°’ í•˜ë‚˜ë§Œ ìˆìœ¼ë©´ ëœë‹¤ .
 		var marker = new Array();
 		var latlng = new Array();
-		var mark_cnt=0;//¸¶Ä¿ Ä«¿îÅÍ 
+		var mark_cnt=0;//ë§ˆì»¤ ì¹´ìš´í„° 
 		
 		function initialize() {
 		
@@ -47,7 +47,7 @@
  				 };
   			
   			map = new google.maps.Map(document.getElementById('map'),mapOptions);
-  			marker["¿À¼³·Ï"] = new google.maps.Marker({
+  			marker["ì˜¤ì„¤ë¡"] = new google.maps.Marker({
    			 position: latlng[0],
    			 map: map,
    			 label : '0'});
@@ -78,11 +78,11 @@
 				 }
 			});
 		}
-		function check_path(){ //test ¿ë
+		function check_path(){ //test ìš©
 			for(var i=0;i<latlng.length;i++)
 				document.write(latlng[i].lat+"<br>");
 		}
-		function draw_path()// °æ·Î ±×¸®±â
+		function draw_path()// ê²½ë¡œ ê·¸ë¦¬ê¸°
 		{ 
    			 var Path = new google.maps.Polyline({
     	  		Path: latlng, strokeColor:'#0000FF',stokeOpacity:1.0, strokeWeight:4
@@ -110,22 +110,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="main.jsp">Á¦ÁÖ¸¦ Ã£´Â ÀçÁÖ</a>
+                <a class="navbar-brand" href="main.jsp">ì œì£¼ë¥¼ ì°¾ëŠ” ì¬ì£¼</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="route_day.jsp">·çÆ®</a>
+                        <a href="route_day.jsp">ë£¨íŠ¸</a>
                     </li>
                     <li>
-                        <a href="datepicker.jsp">°Ô½ÃÆÇ</a>
+                        <a href="datepicker.jsp">ê²Œì‹œíŒ</a>
                     </li>
                     <li>
-                        <a href="contact.html">¸¶ÀÌ ·çÆ®</a>
+                        <a href="contact.html">ë§ˆì´ ë£¨íŠ¸</a>
                     </li>
 					<li>
-                        <a href="contact.html">·Î±×ÀÎ</a>
+                        <a href="contact.html">ë¡œê·¸ì¸</a>
                     </li>
                     
                 </ul>
@@ -141,15 +141,15 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">·çÆ®
-                    <!-- <small>ÀÏÁ¤ ¼±ÅÃ</small> -->
+                <h1 class="page-header">ë£¨íŠ¸
+                    <!-- <small>ì¼ì • ì„ íƒ</small> -->
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="route_day.jsp">step1) ÀÏÁ¤ ¼±ÅÃ</a>
+                    <li><a href="route_day.jsp">step1) ì¼ì • ì„ íƒ</a>
                     </li>
-                    <li><a href="map.jsp">step2) Àå¼Ò ¼±ÅÃ</a>
+                    <li><a href="map.jsp">step2) ì¥ì†Œ ì„ íƒ</a>
                     </li>
-					 <li class="active"> step3) ³¯¾¾ È®ÀÎ</li>
+					 <li class="active"> step3) ë‚ ì”¨ í™•ì¸</li>
                 </ol>
             </div>
         </div>
@@ -160,24 +160,24 @@
     <ul>
         <li><a href="#"><%=month+"/"+date%></a>
             <ul id="list_2nd">
-                <li><a href="#">Á¦ÁÖ</a></li>
+                <li><a href="#">ì œì£¼</a></li>
                 	<ul>
-               		 	 <li><a href="#" onclick="get_address(this.innerHTML)">Á¦ÁÖ°øÇÔ</a></li>
-               		 	 <li><a href="#" onclick="get_address(this.innerHTML)">¼·ÁöÄÚÁö</a></li>
+               		 	 <li><a href="#" onclick="get_address(this.innerHTML)">ì œì£¼ê³µí•¨</a></li>
+               		 	 <li><a href="#" onclick="get_address(this.innerHTML)">ì„­ì§€ì½”ì§€</a></li>
            			</ul>
-                <li><a href="#">¼­±ÍÆ÷</a></li>
+                <li><a href="#">ì„œê·€í¬</a></li>
             </ul>
         </li>
         <li><a href="#"><%=month+"/"+(date+1)%></a>
             <ul id="2nd">
-                <li><a href="#">Á¦ÁÖ</a></li>
-                <li><a href="#">¼­±ÍÆ÷</a></li>
+                <li><a href="#">ì œì£¼</a></li>
+                <li><a href="#">ì„œê·€í¬</a></li>
             </ul>
         </li>
          <li><a href="#"><%=month+"/"+(date+2)%></a>
              <ul id="2nd">
-                <li><a href="#">Á¦ÁÖ</a></li>
-                <li><a href="#">¼­±ÍÆ÷</a></li>
+                <li><a href="#">ì œì£¼</a></li>
+                <li><a href="#">ì„œê·€í¬</a></li>
             </ul>
         </li>
     </ul>

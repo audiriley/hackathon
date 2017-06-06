@@ -9,14 +9,14 @@
 	if(dateNum == null){
 		dateNum = "0"; //초기화
 		}
-	request.setCharacterEncoding("UTF-8");
+	long currentDate = Long.parseLong(dateNum);
 	String Start = request.getParameter("start");
 	String End = request.getParameter("end");
 	Calendar cal= Calendar.getInstance();
 	SimpleDateFormat transFormat = new SimpleDateFormat("yyyy-MM-dd");
 	Date start = transFormat.parse(Start);
+
 	Date end = transFormat.parse(End);
-	long currentDate = Long.parseLong(dateNum);
 	long days=TimeUnit.DAYS.convert(end.getTime()-start.getTime(), TimeUnit.MILLISECONDS);
 	cal.setTime(start);
 
@@ -60,9 +60,9 @@
 						<li style="background:#ff6633; color:white" onclick="document.getElementById('ul2').style.visibility='visible';"><%=cal.get(Calendar.MONTH)+1%>/<%=cal.get(Calendar.DATE)%>
 						<%}
 							else if(i <Long.parseLong(dateNum)){%>
-							<li onclick="alert('지금은  <%=cal.get(Calendar.MONTH)+1%>/<%=cal.get(Calendar.DATE)%>계획을 짜고 있습니다.');"><%=cal.get(Calendar.MONTH)+1%>/<%=cal.get(Calendar.DATE)%></li> <!-- 여기 날짜가 들어간다 -->
+							<li onclick="alert('지금은  <%=Long.parseLong(dateNum)%> 계획을 짜고 있습니다.');"><%=cal.get(Calendar.MONTH)+1%>/<%=cal.get(Calendar.DATE)%></li> <!-- 여기 날짜가 들어간다 -->
 						<%}else{%>
-							<li onclick="alert('<%=cal.get(Calendar.MONTH)+1%>/<%=cal.get(Calendar.DATE)%>을 저장해주세요');"><%=cal.get(Calendar.MONTH)+1%>/<%=cal.get(Calendar.DATE)%></li> <!-- 여기 날짜가 들어간다 -->
+							<li onclick="alert('<%=Long.parseLong(dateNum)%>을 저장해주세요');"><%=cal.get(Calendar.MONTH)+1%>/<%=cal.get(Calendar.DATE)%></li> <!-- 여기 날짜가 들어간다 -->
 						<%}
 							cal.add(Calendar.DATE,1);
 						}%>
@@ -79,8 +79,7 @@
 		<span style="background:#b1c4f1; height:10%; width:100%;display:block">여행루트</span>
 		<div id="panel">
 		</div>
-		<input type="hidden" name="start" value="<%=Start%>">
-		<input type="hidden" name="end"  value="<%=End%>">
+		
 		<input type="submit" value="save">
 	</div>
    </form>

@@ -5,6 +5,8 @@
 		var latlng = new Array();
 		var count=0;//마커 카운터 
 		var visited = new Array();
+		var form = new Array(3);
+		var property=["place","time","lat","lng"];
 		//데이터의 폼 이름은 $날짜 (currentPage)$n번쨰 장소((count-1))$(name|place|lat|lng|time)
 		//제주 공항이 첫 출발지
 		
@@ -61,12 +63,6 @@
 			}
 		}
 
-		function flow(){
-			if(count!=3){
-				alert("방문하고 싶은 3군데를 입력하세요");
-				return false;
-			}
-		}
 		var time =  new Array(3);
 		function take(){   
 		
@@ -91,20 +87,15 @@
  				Path.setMap(map);
 		}
 		function addFormElement(){
-
-			var form = new Array(3);
+			var temp=[address,latlng[count][0],latlng[count][1]];
 			for(var i=0;i<3;i++){
 				form[i]= document.createElement("input");
 				form[i].setAttribute("type","hidden");
+				form[i].setAttribute('name','$'+(count-1)+"$"+property[i]);
+				form[i].setAttribute('value',temp[i]);
 				document.getElementById('panel').appendChild(form[i]);
 			}
 
-			form[0].setAttribute('name','$'+(count-1)+"$place");
-			form[0].setAttribute('value',address);
-			form[1].setAttribute('name','$'+(count-1)+"$lat");
-			form[1].setAttribute('value', latlng[count-1].lat);
-			form[2].setAttribute('name','$'+(count-1)+"$lng");
-			form[2].setAttribute('value', latlng[count-1].lng);
 		}
 			
 		google.maps.event.addDomListener(window, 'load', initialize);

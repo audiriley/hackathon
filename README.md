@@ -3,10 +3,10 @@
 >audiriley, lynring24, 최수연
 
 <b>1 Main</b><br>
-![Main](./capture/main.gif) <br><br>
+![Main](./capture/main.gif)<br>
 
 <b>2-1 경로 : 날짜</b><br>
-![date](./capture/date.png) <br><br>
+![date](./capture/date.png) <br>
 
 <b>2-2 경로 :장소</b><br>
 문화관광부가 제공하는 제주도 내의 관광지 데이터들을 사용하여 DB의 TOUR테이블에 저장 후,<br>
@@ -19,7 +19,7 @@
   RSS 방식의 기상청 동네예보, 중기예보 API를 활용하였는데 그 활용 방법은 다음과 같다.<br>
   &nbsp;&nbsp;1) 장소 선택 단계에서 받았던 위도, 경도 데이터를 기상청 API에 맞게 함수를 통해 변환한다.<br>
   &nbsp;&nbsp;2) 1번 과정을 한 번 거친 후 변환한 정보를 통해 기상청의 단기, 중기 정보를 가져온다.
-![weather](./capture/showWeather.PNG) <br><br>
+![weather](./capture/showWeather.PNG) <br>
 <b>2-4 </b>
 ![routeTable](./capture/routeTable.PNG) <br><br>
 

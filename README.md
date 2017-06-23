@@ -3,7 +3,7 @@
 >audiriley, lynring24, 최수연
 
 1. Main
-(./capture/main.gif)
+(/capture/main.gif)
 
 
 

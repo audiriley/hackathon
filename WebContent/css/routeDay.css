@@ -1,0 +1,167 @@
+@CHARSET "UTF-8";
+
+.nextStep:link{
+    font-size:25pt;
+}
+	
+h1{
+	font-style:bold;
+}
+
+#jb-container {
+    width: 1310px;
+    float:center;
+    margin-top:0px;
+    padding: 20px;
+    padding-top : 0px;
+     padding-bottom : 10px;
+    margin-left:50px;
+}
+#jb-header {
+	width: 1200px;
+    padding: 5px;
+    text-align : center;
+}
+#jb-content { /*사진부분*/
+	width: 390px;
+	padding: 10px;
+	float: left;
+	padding-left : 30px;
+	border-left : 2px solid #aeaeae;
+	border-bottom: 2px solid #aeaeae;
+	margin-bottom:20px;
+}
+#jb-sidebar { /*내용부분*/
+	width: 810px;
+	padding: 10px;
+	padding-bottom:0px;
+	float: left;
+	 border-right: 2px solid #aeaeae;
+	  border-bottom: 2px solid #aeaeae;
+}
+.side-footer{ /*아이디,여행이름 부분*/
+	clear: both;
+	padding: 20px;
+	padding-top:0px;
+}
+#jb-footer {
+	clear: both;
+	width:988px;
+	height:110px;
+	padding: 5px;
+	text-align:center;
+	margin:auto;
+}
+
+#jb-footer-side1{
+	float: left;
+	position: relative;
+	min-height: 1px;
+	padding-left: 150px;
+	
+}
+    
+.col-lg-4{ /*출발일*/
+	float: left;
+	position: relative;
+	min-height: 1px;
+	padding: 20px;
+	padding-left: 5px;
+	
+}
+.col-lg-3{	/*비행기그림*/
+	float: left;
+	position: relative;
+	min-height: 1px;
+	
+}
+
+.col-lg-5{	/*도착일*/
+	float: right;
+	margin-right:20px;
+	position: relative;
+	min-height: 1px;
+	padding-right: 5px;
+	padding: 20px;
+	
+}
+
+#footer1{
+	float: left;
+	position: relative;
+	min-height: 1px;
+	width:100px;
+	text-align:center;
+	font-size:20px;
+	padding-right:10px;
+	padding-bottom : 32px;
+}
+#footer2{
+	float: left;
+	position: relative;
+	padding-left:15px;
+	min-height: 1px;
+	width:100px;
+	text-align:center;
+	font-size:20px;
+	margin-left:15px;
+}
+#footer3{
+	float: left;
+	position: relative;
+	min-height: 1px;
+	width:250px;
+	text-align:center;
+	font-size:20px;
+	padding-bottom : 40px;
+	margin-left:20px;
+}
+
+#footer4{
+	float: right;
+	position: relative;
+	min-height: 1px;
+	width:140px;
+	text-align:center;
+	font-size:20px;
+	padding-bottom : 40px;
+	 margin-top:30px;
+}
+  
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+ input[type="text"]{
+  width: 220px;  
+  height: 25px;
+  line-height : normal;  
+  border: 1.5px solid black;
+  border-radius: 0;  
+  outline-style: none; /*포커스발생효과없애기*/
+  -webkit-appearance: none;  /* 브라우저별 기본 스타일링 제거 */
+  -moz-appearance: none;
+  appearance: none; 
+}
+
+input[type=submit]{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    size:18pt;
+}
+
+
+  
+    	

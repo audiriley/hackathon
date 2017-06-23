@@ -4,13 +4,16 @@
 	if(memberId == null){
 %> 
 	<script>
-	  alert("등로되지 않은 회원정보입니다.");
-	     location.href="loginForm.jsp";
+	  alert("등록되지 않은 회원정보입니다.");
+	     location.href="login.jsp";
 	</script>
 <%	}
 	else{%>
 	<script>
-	  alert("즐거운 여행 되세요");
-	     location.href="main.jsp";
+	  var rs = confirm("<%=memberId%>님 여행을 계속 하시겠습니까?");
+	     if(rs==true) 
+	    	 location.href="main.jsp";
+	     else 
+	    	 location.href="logout.jsp";
 	</script>
 <%	}%>

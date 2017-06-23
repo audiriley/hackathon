@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="user.UserDAO" %>
+    <%@ page import="user.UserDAO" %>
 <%@ page import="java.io.PrintWriter" %>
 <% request.setCharacterEncoding("UTF-8");%>
 <jsp:useBean id="user" class="user.User" scope="page"/>
@@ -15,6 +15,7 @@
  	int result = userDAO.login(user.getId(),user.getPassword());
  	if(result ==1){
  		PrintWriter script = response.getWriter();
+ 		session.setAttribute("idKey",user.getId());
  		script.println("<script>");
  		script.println("location.href='main.jsp'");
  		script.println("</script>");

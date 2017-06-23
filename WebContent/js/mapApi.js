@@ -1,4 +1,4 @@
-  var map;
+        var map;
 		var geocoder;
 		var address;//주소를 받아올 값 하나만 있으면 된다 .
 		var marker = new Array();
@@ -8,6 +8,17 @@
 		//데이터의 폼 이름은 $날짜 (currentPage)$n번쨰 장소((count-1))$(name|place|lat|lng|time)
 		//제주 공항이 첫 출발지
 		
+		
+		var RE = 6371.00877; // 지구 반경(km)
+		var GRID = 5.0; // 격자 간격(km)
+		var SLAT1 = 30.0; // 투영 위도1(degree)
+		var SLAT2 = 60.0; // 투영 위도2(degree)
+		var OLON = 126.0; // 기준점 경도(degree)
+		var OLAT = 38.0; // 기준점 위도(degree)
+		var XO = 43; // 기준점 X좌표(GRID)
+		var YO = 136; // 기1준점 Y좌표(GRID)
+		var rs;
+		
 		function check(){
 			for(var i=0;i<visited.length;i++)
 				if(visited[i]==address)
@@ -16,7 +27,7 @@
 		}
 		function initialize() {
 			count=0;
-			latlng[0] = {lat: 33.51041350000001, lng: 126.49135339999998};
+			latlng[0] = {lat: 33.51041, lng: 126.49135339};
 			var mapOptions = {
   			zoom: 10,
   			center: latlng[0]
@@ -62,12 +73,15 @@
 		}
 
 		function flow(){
+			
 			if(count!=3){
-				alert("방문하고 싶은 3군데를 입력하세요");
+				alert(""+x+" "+y);
 				return false;
 			}
 		}
 		var time =  new Array(3);
+		
+		
 		function take(){   
 		
 			var temp = "<br>"+address;
@@ -90,6 +104,8 @@
   				});
  				Path.setMap(map);
 		}
+
+		
 		function addFormElement(){
 
 			var form = new Array(3);
@@ -98,13 +114,14 @@
 				form[i].setAttribute("type","hidden");
 				document.getElementById('panel').appendChild(form[i]);
 			}
-
+			
 			form[0].setAttribute('name','$'+(count-1)+"$place");
 			form[0].setAttribute('value',address);
 			form[1].setAttribute('name','$'+(count-1)+"$lat");
-			form[1].setAttribute('value', latlng[count-1].lat);
+			form[1].setAttribute('value',latlng[count-1].lat);
 			form[2].setAttribute('name','$'+(count-1)+"$lng");
-			form[2].setAttribute('value', latlng[count-1].lng);
+			form[2].setAttribute('value',latlng[count-1].lng);
+		
 		}
 			
 		google.maps.event.addDomListener(window, 'load', initialize);

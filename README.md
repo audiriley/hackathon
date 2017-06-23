@@ -2,6 +2,9 @@
 >제주도 여행자들이 편리하게 여행을 할 수 있도록 도와주는 웹사이트입니다. <br>
 >audiriley, lynring24, 최수연
 
+1. Main
+(./capture/main.gif)
+
 
 
 

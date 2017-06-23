@@ -1,0 +1,22 @@
+		/* Full-width input fields */
+body{
+	display:block;
+	top:50%;
+	left:30%;
+	background:#f3f3f3;
+	align:center;
+	position:relative;
+	}
+input[type=text], input[type=password] {
+    padding: 12px 20px;
+    margin: 8px;
+    width:100%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.file_input{
+	align:center;
+	margin: auto;
+		display:block;
+}

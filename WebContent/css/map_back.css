@@ -1,0 +1,96 @@
+@CHARSET "UTF-8";
+
+#map{
+	position:absolute; width:80%; height:60%; z-index:-3;
+}
+#ul1 { 
+	/*최대 : 8일  */ 
+	display:block;
+	position:absolute; width:100px; height:60%; z-index:3;
+	list-style:none;
+	background:#dadada;
+	margin:0;
+    padding:0;
+    /*overflow: auto;*/
+}
+
+/*----------------------------------------------------------1 층--------------------------------------------------------- */
+#ul1 li{
+	display:block;
+	background:#b3b3b3;
+    border-bottom:solid 1px white;
+    cursor:pointer;
+    position:relative;
+}
+
+/* We apply the background hover color when user hover the mouse over of the li component */
+#ul1 li:hover{
+    background-color:#ff6633;
+    color:#ffffff;
+    position:relative;
+}
+
+/*----------------------------------------------------------2 층--------------------------------------------------------- */
+/* We make the position to absolute for flyout menu and hidden the ul until the user hover the parent li item */
+#ul2{
+	left:100px;
+    top:0px;
+    display:block;
+	position:absolute; width:100px; z-index:3;
+	list-style:none;
+	background:#dadada;
+	margin:0;
+    padding:0;
+    visibility:hidden;
+}
+
+/* When user has hovered the li item, we show the ul list by applying display:block, note: 150px is the individual menu width.  */
+#ul1 li:hover ul{
+    left:100px;
+    top:0px;
+    position:absolute; width:100px;height:60%;
+	list-style:none;
+	margin:0;
+    padding:0;
+}
+
+/* we apply different background color to 2nd level menu items*/
+#ul2 li{
+    position:relative;
+	background:#b3b3b3;
+    border-bottom:solid 1px white;
+    width:100px;
+    cursor:pointer;
+    list-style:none;
+}
+
+
+/*  2층  색 변환  when hovering the menu */
+#ul2 li:hover{
+    background:#ff6633;
+    color:#ffffff;
+    list-style:none;
+    position:relative;
+}
+
+/*----------------------------------------------------------3 층--------------------------------------------------------- */
+#ul2 li ul{
+    left:60px;
+    top:0px;
+    display:block;
+	position:absolute; width:300px;
+}
+
+#ul2 li ul li{
+    position:relative;
+}
+#ul1 li ul li ul li:hover{
+	background:#ff6633;
+    color:#ffffff;
+}
+/*관광지 명소들*/
+
+/* Clear float */
+.clear{
+    clear:both;
+}

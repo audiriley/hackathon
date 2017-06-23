@@ -1,0 +1,108 @@
+@CHARSET "UTF-8";
+
+
+
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin:auto;
+}
+
+th,td {
+    padding: 15px;   
+}
+
+#title{
+	width: 500px;
+}
+
+.pagination {
+    margin-left: 35%; 
+    margin-right: auto; 
+    margin-top: 40px; 
+    display: block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {
+	background-color: #ddd;
+}
+
+.btn {
+	margin-left:930px;
+	margin-bottom : 10px;
+    border: 2px solid #008CBA; 
+    background-color: white;
+    color : black;
+    padding: 10px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.btn2 {
+	margin-bottom : 10px;
+    border: 2px solid #008CBA; 
+    color: black;
+    background-color:white;
+    padding: 10px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 75%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 75%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-color: #555 transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+

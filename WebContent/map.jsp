@@ -42,7 +42,7 @@
   <head>
   <title>제주를 찾는 재주_place</title>
   <meta charset="UTF-8"/>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCm9feXcf-2caAZ-K2PikChgFy375P4Y0Q"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY"></script>
 	<!-- css -->
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/routeDay.css" rel="stylesheet">

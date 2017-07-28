@@ -5,8 +5,7 @@
 ### 1. Main
 ![Main](./capture/main.gif)
 
-### 2. 여행계획
-#### 2-1 경로 : 날짜
+### 2-1 경로 : 날짜
 ![date](./capture/date.png)
 
 #### 2-2 경로 :장소
